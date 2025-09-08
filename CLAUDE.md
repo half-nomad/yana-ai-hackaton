@@ -11,6 +11,9 @@
 5.  **컴포넌트:** shadcn/ui를 참고하되 agencyyolo의 미니멀 스타일에 맞춰 재사용 가능한 컴포넌트(Accordion, Button 등)를 `css/components.css`와 `js/main.js`에 Vanilla JS와 CSS로 직접 구현한다. 모서리 없는 디자인, 대형 버튼, 깔끔한 간격을 적용한다.
 6.  **핵심 인터랙션:**
     -   히어로 섹션의 스크롤에 따른 이미지 전환 효과를 반드시 구현한다.
+    -   24시간 일정표는 독립 섹션으로 구성하여 항상 가시성을 확보한다.
+    -   커리큘럼 모달 팝업으로 상세 정보를 표시한다.
     -   모든 내부 링크(CTA 포함)는 Smooth Scroll로 동작해야 한다.
     -   요구된 모든 토글(Accordion) 기능은 Vanilla JS로 구현한다.
+    -   소셜 미디어 공유를 위한 Open Graph 및 Twitter Card 메타 태그를 포함한다.
 7.  **기술 제약:** React, Vue 등의 프레임워크나 jQuery 같은 라이브러리를 사용하지 않고, 순수 HTML, CSS, JavaScript로만 프로젝트를 완성한다.
