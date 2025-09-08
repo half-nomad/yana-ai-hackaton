@@ -313,3 +313,124 @@ a.active {
     height: var(--space-5);
   }
 }
+
+/* Modal Component */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--duration-normal) var(--easing-ease-out);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  padding: var(--space-8);
+  transform: scale(0.9) translateY(20px);
+  transition: transform var(--duration-normal) var(--easing-ease-out);
+  z-index: 1;
+}
+
+.modal.active .modal__content {
+  transform: scale(1) translateY(0);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  color: var(--fg-secondary);
+  cursor: pointer;
+  padding: var(--space-2);
+  transition: color var(--duration-fast) var(--easing-ease-out);
+}
+
+.modal__close:hover {
+  color: var(--fg-primary);
+}
+
+.modal__body {
+  text-align: center;
+}
+
+.modal__icon {
+  margin: 0 auto var(--space-6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__icon svg {
+  color: var(--brand-primary);
+  width: 64px;
+  height: 64px;
+}
+
+.modal__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--fg-primary);
+  margin-bottom: var(--space-6);
+}
+
+.modal__description {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-secondary);
+}
+
+.modal__description h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--fg-primary);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.modal__description ul {
+  text-align: left;
+  margin: var(--space-4) 0;
+}
+
+.modal__description li {
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.modal__description li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--brand-primary);
+  font-weight: var(--font-bold);
+}

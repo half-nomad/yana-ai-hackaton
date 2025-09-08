@@ -34,6 +34,7 @@
             <div class="hero__background">
                 <img src="assets/hero_noon.png" alt="YANA AI 해커톤 - 낮" class="hero__image hero__image--noon">
                 <img src="assets/hero_night.png" alt="YANA AI 해커톤 - 밤" class="hero__image hero__image--night">
+                <div class="hero__overlay"></div>
             </div>
             <div class="container">
                 <div class="hero__content">
@@ -61,8 +62,8 @@
             <div class="container">
                 <h2 class="section__title">프로그램 소개</h2>
                 <div class="program__content">
-                    <p>1인 사업가와 브랜드 보유자를 위한 특별한 AI 마스터 과정입니다.<br>
-                    24시간 동안 5명의 전문가와 함께 AI를 활용한 비즈니스 성장 비법을 체득하세요.</p>
+                    <p>1인 사업가와 브랜드 보유자를 위한 <br>특별한 AI 마스터 과정입니다.</br><br>
+                    24시간 동안 5명의 전문가와 함께</br>AI를 활용한 비즈니스 성장 비법을 체득하세요.</p>
                     <ul>
                         <li><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-1.5 3.5 0 5s3.5 1.5 5 0l3.5-3.5c1.5-1.5 1.5-3.5 0-5s-3.5-1.5-5 0l-2.5 2.5"/><path d="m10 11 2 2"/><path d="m19.5 7.5c1.5-1.5 1.5-3.5 0-5s-3.5-1.5-5 0l-3.5 3.5c-1.5 1.5-1.5 3.5 0 5s3.5 1.5 5 0l2.5-2.5"/></svg> 압축 성장: 6개월 과정을 24시간에</li>
                         <li><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 6.5a2.5 2.5 0 0 1 2.5-2.5A2.5 2.5 0 0 1 19.5 6.5"/><path d="M14.5 13a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5"/><path d="M14.5 13a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 1 0-5"/></svg> 생각하는 힘: AI 시대의 핵심 역량</li>
@@ -280,6 +281,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- Curriculum Modal -->
+    <div id="curriculum-modal" class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="모달 닫기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 6-12 12"/>
+                    <path d="m6 6 12 12"/>
+                </svg>
+            </button>
+            <div class="modal__body">
+                <div class="modal__icon"></div>
+                <h3 class="modal__title"></h3>
+                <div class="modal__description"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>

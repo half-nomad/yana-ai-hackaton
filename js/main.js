@@ -24,6 +24,7 @@ class YANALandingPage {
     this.setupHeroImageTransition();
     this.setupHeroImageFade();
     this.setupPosterReveal();
+    this.setupCurriculumModal();
   }
 
   // Accordion Component Implementation
@@ -242,48 +243,17 @@ class YANALandingPage {
   }
 
   updateHeroTransition(heroSection, heroImage, heroBackground) {
-    const scrollY = window.scrollY;
-    const heroHeight = heroSection.offsetHeight;
-    const scrollProgress = Math.min(scrollY / heroHeight, 1);
-    
-    // Parallax effect on background
-    if (heroBackground) {
-      const parallaxOffset = scrollY * 0.5;
-      heroBackground.style.transform = `translateY(${parallaxOffset}px)`;
-    }
-    
-    // Progressive image transformation
-    if (scrollProgress > 0) {
-      const brightness = Math.max(0.4, 1 - (scrollProgress * 0.6));
-      const contrast = 1 + (scrollProgress * 0.3);
-      const saturate = 1 + (scrollProgress * 0.5);
-      const scale = 1 + (scrollProgress * 0.2);
-      const blur = scrollProgress * 2;
-      
-      heroImage.style.filter = `brightness(${brightness}) contrast(${contrast}) saturate(${saturate}) blur(${blur}px)`;
-      heroImage.style.transform = `scale(${scale})`;
-      heroImage.style.transition = scrollProgress === 0 ? 'all 0.6s ease-out' : 'none';
-    } else {
-      // Reset to original state
-      heroImage.style.filter = 'none';
-      heroImage.style.transform = 'scale(1)';
-      heroImage.style.transition = 'all 0.6s ease-out';
-    }
-    
-    // Add overlay intensity based on scroll
-    const overlay = heroBackground.querySelector('::after') || heroBackground;
-    if (overlay) {
-      const overlayOpacity = 0.6 + (scrollProgress * 0.3);
-      overlay.style.setProperty('--overlay-opacity', overlayOpacity);
-    }
+    // 모든 스크롤 기반 효과 제거 - 원본 이미지 유지
   }
 
   // Hero Image Auto Fade (2-second intervals)
   setupHeroImageFade() {
     const noonImage = document.querySelector('.hero__image--noon');
     const nightImage = document.querySelector('.hero__image--night');
+    const heroContent = document.querySelector('.hero__content');
+    const heroBackground = document.querySelector('.hero__background');
     
-    if (!noonImage || !nightImage) return;
+    if (!noonImage || !nightImage || !heroContent || !heroBackground) return;
 
     let isNightActive = false;
     
@@ -291,9 +261,13 @@ class YANALandingPage {
     setInterval(() => {
       if (isNightActive) {
         nightImage.classList.remove('active');
+        heroContent.classList.remove('hero__content--night');
+        heroBackground.classList.remove('hero__background--night');
         isNightActive = false;
       } else {
         nightImage.classList.add('active');
+        heroContent.classList.add('hero__content--night');
+        heroBackground.classList.add('hero__background--night');
         isNightActive = true;
       }
     }, 2000);
@@ -352,6 +326,117 @@ class YANALandingPage {
       // Section is not visible, keep it dark
       posterSection.style.filter = 'brightness(0.3)';
     }
+  }
+
+  // Curriculum Modal Implementation
+  setupCurriculumModal() {
+    const modal = document.getElementById('curriculum-modal');
+    const modalOverlay = modal.querySelector('.modal__overlay');
+    const closeButton = modal.querySelector('.modal__close');
+    const curriculumItems = document.querySelectorAll('.curriculum__flow .flow-item');
+    
+    if (!modal || !curriculumItems.length) return;
+
+    const curriculumData = {
+      'branding': {
+        title: 'AI 브랜딩 전략',
+        description: 'AI 도구를 활용한 브랜드 아이덴티티 구축과 마케팅 전략 수립',
+        content: [
+          { subtitle: '핵심 학습 내용', items: ['브랜드 포지셔닝 전략', 'AI 기반 타겟 분석', '브랜드 스토리텔링', '시각적 브랜드 아이덴티티'] },
+          { subtitle: '활용 도구', items: ['ChatGPT for branding', 'Midjourney', 'Claude', 'Brand strategy templates'] },
+          { subtitle: '프로젝트 결과물', items: ['브랜드 전략 문서', '브랜드 가이드라인', '마케팅 캠페인 기획서'] }
+        ]
+      },
+      'writing': {
+        title: 'AI 콘텐츠 라이팅',
+        description: 'AI를 활용한 효과적인 콘텐츠 제작과 카피라이팅 기법',
+        content: [
+          { subtitle: '핵심 학습 내용', items: ['AI 프롬프트 엔지니어링', '콘텐츠 전략 수립', '다양한 채널별 라이팅', 'SEO 최적화 콘텐츠'] },
+          { subtitle: '활용 도구', items: ['ChatGPT', 'Claude', 'Copy.ai', 'Jasper', 'Notion AI'] },
+          { subtitle: '프로젝트 결과물', items: ['블로그 콘텐츠 시리즈', 'SNS 캠페인 카피', '이메일 마케팅 템플릿'] }
+        ]
+      },
+      'design': {
+        title: 'AI 디자인 & 비주얼',
+        description: 'AI 도구를 활용한 창의적인 디자인과 비주얼 콘텐츠 제작',
+        content: [
+          { subtitle: '핵심 학습 내용', items: ['AI 이미지 생성 기법', 'UI/UX 디자인 원칙', '브랜드 일관성 유지', '디자인 시스템 구축'] },
+          { subtitle: '활용 도구', items: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'Figma AI', 'Canva AI'] },
+          { subtitle: '프로젝트 결과물', items: ['브랜드 비주얼 시스템', '웹사이트 디자인', '마케팅 콘텐츠 디자인'] }
+        ]
+      },
+      'coding': {
+        title: 'AI 웹 개발',
+        description: 'AI 도구를 활용한 효율적인 웹 개발과 프로토타이핑',
+        content: [
+          { subtitle: '핵심 학습 내용', items: ['AI 코딩 어시스턴트 활용', '프론트엔드 개발', '반응형 웹 디자인', 'API 통합'] },
+          { subtitle: '활용 도구', items: ['GitHub Copilot', 'Claude Code', 'Cursor AI', 'V0.dev', 'Replit'] },
+          { subtitle: '프로젝트 결과물', items: ['반응형 랜딩 페이지', '인터랙티브 웹 애플리케이션', 'AI 통합 데모'] }
+        ]
+      },
+      'automation': {
+        title: 'AI 자동화 & 최적화',
+        description: '워크플로우 자동화와 비즈니스 프로세스 최적화',
+        content: [
+          { subtitle: '핵심 학습 내용', items: ['워크플로우 자동화', '데이터 분석 자동화', 'API 연결', '프로세스 최적화'] },
+          { subtitle: '활용 도구', items: ['Zapier', 'Make.com', 'n8n', 'Python scripts', 'Google Apps Script'] },
+          { subtitle: '프로젝트 결과물', items: ['자동화 시스템', '데이터 대시보드', '워크플로우 템플릿'] }
+        ]
+      }
+    };
+
+    // Handle curriculum item clicks
+    curriculumItems.forEach((item, index) => {
+      const flowItems = ['branding', 'writing', 'design', 'coding', 'automation'];
+      const dataKey = flowItems[index];
+      
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openCurriculumModal(modal, curriculumData[dataKey]);
+        this.trackEvent('curriculum_modal_open', { section: dataKey });
+      });
+    });
+
+    // Handle modal close
+    const closeModal = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    modalOverlay.addEventListener('click', closeModal);
+    closeButton.addEventListener('click', closeModal);
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  openCurriculumModal(modal, data) {
+    const modalTitle = modal.querySelector('.modal__title');
+    const modalDescription = modal.querySelector('.modal__description');
+    
+    // Update modal content
+    modalTitle.textContent = data.title;
+    
+    let contentHTML = `<p>${data.description}</p>`;
+    
+    data.content.forEach(section => {
+      contentHTML += `
+        <h4>${section.subtitle}</h4>
+        <ul>
+          ${section.items.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      `;
+    });
+    
+    modalDescription.innerHTML = contentHTML;
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 
   // Utility function for event tracking
