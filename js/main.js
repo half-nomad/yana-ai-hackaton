@@ -71,7 +71,7 @@ class YANALandingPage {
     }
   }
 
-  // Smooth Scroll Implementation
+  // Smooth Scroll Implementation - Enhanced
   setupSmoothScroll() {
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -85,18 +85,77 @@ class YANALandingPage {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           this.smoothScrollTo(targetElement);
+          this.trackEvent('smooth_scroll', { target: targetId });
         }
       });
     });
+
+    // Add scroll spy for navigation highlighting
+    this.setupScrollSpy();
   }
 
   smoothScrollTo(element) {
-    const headerHeight = document.querySelector('.header').offsetHeight;
+    const header = document.querySelector('.header');
+    const headerHeight = header ? header.offsetHeight : 0;
     const targetPosition = element.offsetTop - headerHeight - 20;
     
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
+    // Use custom smooth scroll for better control
+    this.animatedScrollTo(targetPosition);
+  }
+
+  animatedScrollTo(targetPosition) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = Math.min(Math.abs(distance) * 0.5, 1000); // Dynamic duration
+    let startTime = null;
+
+    const easeInOutQuad = (t) => {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    };
+
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      
+      window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
+  }
+
+  setupScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    if (sections.length === 0) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          this.updateActiveNavLink(navLinks, id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  }
+
+  updateActiveNavLink(navLinks, activeId) {
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', href === `#${activeId}`);
     });
   }
 
@@ -156,42 +215,65 @@ class YANALandingPage {
     banner.style.opacity = '1';
   }
 
-  // Hero Image Transition on Scroll
+  // Hero Image Transition on Scroll - Enhanced
   setupHeroImageTransition() {
     const heroSection = document.querySelector('.hero');
     const heroImage = document.querySelector('.hero__image');
+    const heroBackground = document.querySelector('.hero__background');
     
     if (!heroSection || !heroImage) return;
 
-    let isTransitioned = false;
+    // Throttle scroll events for better performance
+    let ticking = false;
     
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const heroHeight = heroSection.offsetHeight;
-      const triggerPoint = heroHeight * 0.3; // Trigger at 30% scroll
-
-      if (scrollY > triggerPoint && !isTransitioned) {
-        this.transitionHeroImage(heroImage);
-        isTransitioned = true;
-      } else if (scrollY <= triggerPoint && isTransitioned) {
-        this.resetHeroImage(heroImage);
-        isTransitioned = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          this.updateHeroTransition(heroSection, heroImage, heroBackground);
+          ticking = false;
+        });
+        ticking = true;
       }
-    });
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
   }
 
-  transitionHeroImage(image) {
-    // Add transition effect
-    image.style.filter = 'brightness(0.7) contrast(1.2) saturate(1.3)';
-    image.style.transform = 'scale(1.1)';
-    image.style.transition = 'all 1s ease-out';
-  }
-
-  resetHeroImage(image) {
-    // Reset to original state
-    image.style.filter = 'none';
-    image.style.transform = 'scale(1)';
-    image.style.transition = 'all 1s ease-out';
+  updateHeroTransition(heroSection, heroImage, heroBackground) {
+    const scrollY = window.scrollY;
+    const heroHeight = heroSection.offsetHeight;
+    const scrollProgress = Math.min(scrollY / heroHeight, 1);
+    
+    // Parallax effect on background
+    if (heroBackground) {
+      const parallaxOffset = scrollY * 0.5;
+      heroBackground.style.transform = `translateY(${parallaxOffset}px)`;
+    }
+    
+    // Progressive image transformation
+    if (scrollProgress > 0) {
+      const brightness = Math.max(0.4, 1 - (scrollProgress * 0.6));
+      const contrast = 1 + (scrollProgress * 0.3);
+      const saturate = 1 + (scrollProgress * 0.5);
+      const scale = 1 + (scrollProgress * 0.2);
+      const blur = scrollProgress * 2;
+      
+      heroImage.style.filter = `brightness(${brightness}) contrast(${contrast}) saturate(${saturate}) blur(${blur}px)`;
+      heroImage.style.transform = `scale(${scale})`;
+      heroImage.style.transition = scrollProgress === 0 ? 'all 0.6s ease-out' : 'none';
+    } else {
+      // Reset to original state
+      heroImage.style.filter = 'none';
+      heroImage.style.transform = 'scale(1)';
+      heroImage.style.transition = 'all 0.6s ease-out';
+    }
+    
+    // Add overlay intensity based on scroll
+    const overlay = heroBackground.querySelector('::after') || heroBackground;
+    if (overlay) {
+      const overlayOpacity = 0.6 + (scrollProgress * 0.3);
+      overlay.style.setProperty('--overlay-opacity', overlayOpacity);
+    }
   }
 
   // Utility function for event tracking

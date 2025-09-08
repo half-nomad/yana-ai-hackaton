@@ -102,6 +102,18 @@
   display: none;
 }
 
+.btn.active {
+  background-color: var(--brand-primary);
+  color: var(--brand-primary-foreground);
+  box-shadow: 0 4px 15px rgba(242, 229, 0, 0.4);
+}
+
+/* Navigation Active States */
+a.active {
+  color: var(--brand-primary) !important;
+  font-weight: var(--font-semibold);
+}
+
 /* Accordion Component */
 .accordion {
   max-width: 800px;
