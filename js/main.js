@@ -22,6 +22,8 @@ class YANALandingPage {
     this.setupSmoothScroll();
     this.setupFloatingBanner();
     this.setupHeroImageTransition();
+    this.setupHeroImageFade();
+    this.setupPosterReveal();
   }
 
   // Accordion Component Implementation
@@ -273,6 +275,82 @@ class YANALandingPage {
     if (overlay) {
       const overlayOpacity = 0.6 + (scrollProgress * 0.3);
       overlay.style.setProperty('--overlay-opacity', overlayOpacity);
+    }
+  }
+
+  // Hero Image Auto Fade (2-second intervals)
+  setupHeroImageFade() {
+    const noonImage = document.querySelector('.hero__image--noon');
+    const nightImage = document.querySelector('.hero__image--night');
+    
+    if (!noonImage || !nightImage) return;
+
+    let isNightActive = false;
+    
+    // Auto-fade every 2 seconds
+    setInterval(() => {
+      if (isNightActive) {
+        nightImage.classList.remove('active');
+        isNightActive = false;
+      } else {
+        nightImage.classList.add('active');
+        isNightActive = true;
+      }
+    }, 2000);
+  }
+
+  // Poster Brightness Effect on Scroll
+  setupPosterReveal() {
+    const posterSection = document.querySelector('.poster-reveal');
+    if (!posterSection) return;
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          this.updatePosterBrightness(posterSection);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  }
+
+  updatePosterBrightness(posterSection) {
+    const rect = posterSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const sectionHeight = rect.height;
+    
+    // Calculate scroll progress within the poster section
+    let scrollProgress = 0;
+    
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+      // Section is visible
+      if (rect.top > 0) {
+        // Section is entering from bottom
+        scrollProgress = (windowHeight - rect.top) / windowHeight;
+      } else if (rect.bottom < windowHeight) {
+        // Section is leaving from top
+        scrollProgress = rect.bottom / windowHeight;
+      } else {
+        // Section fills the viewport
+        scrollProgress = 1;
+      }
+      
+      // Clamp progress between 0 and 1
+      scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+      
+      // Calculate brightness: 0.3 (dark) to 1.2 (bright) based on scroll progress
+      const brightness = 0.3 + (scrollProgress * 0.9);
+      
+      posterSection.style.filter = `brightness(${brightness})`;
+    } else {
+      // Section is not visible, keep it dark
+      posterSection.style.filter = 'brightness(0.3)';
     }
   }
 
