@@ -506,7 +506,7 @@ img {
   min-height: 80vh;
   overflow: hidden;
   background-color: var(--bg-primary);
-  background-image: url('../assets/poster1.png');
+  background-image: url('../assets/poster2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

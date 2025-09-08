@@ -343,8 +343,8 @@ class YANALandingPage {
         description: 'AI 도구를 활용한 브랜드 아이덴티티 구축과 마케팅 전략 수립',
         content: [
           { subtitle: '핵심 학습 내용', items: ['브랜드 포지셔닝 전략', 'AI 기반 타겟 분석', '브랜드 스토리텔링', '시각적 브랜드 아이덴티티'] },
-          { subtitle: '활용 도구', items: ['ChatGPT for branding', 'Midjourney', 'Claude', 'Brand strategy templates'] },
-          { subtitle: '프로젝트 결과물', items: ['브랜드 전략 문서', '브랜드 가이드라인', '마케팅 캠페인 기획서'] }
+          { subtitle: '활용 도구', items: ['ChatGPT', 'Claude', 'Google AI Studio'] },
+          { subtitle: '프로젝트 결과물', items: ['브랜드 전략 기획 및 가이드라인'] }
         ]
       },
       'writing': {
@@ -352,8 +352,8 @@ class YANALandingPage {
         description: 'AI를 활용한 효과적인 콘텐츠 제작과 카피라이팅 기법',
         content: [
           { subtitle: '핵심 학습 내용', items: ['AI 프롬프트 엔지니어링', '콘텐츠 전략 수립', '다양한 채널별 라이팅', 'SEO 최적화 콘텐츠'] },
-          { subtitle: '활용 도구', items: ['ChatGPT', 'Claude', 'Copy.ai', 'Jasper', 'Notion AI'] },
-          { subtitle: '프로젝트 결과물', items: ['블로그 콘텐츠 시리즈', 'SNS 캠페인 카피', '이메일 마케팅 템플릿'] }
+          { subtitle: '활용 도구', items: ['ChatGPT'] },
+          { subtitle: '프로젝트 결과물', items: ['우리 브랜드(나)에 대한 콘텐츠 크리에이팅 방법'] }
         ]
       },
       'design': {
@@ -361,26 +361,26 @@ class YANALandingPage {
         description: 'AI 도구를 활용한 창의적인 디자인과 비주얼 콘텐츠 제작',
         content: [
           { subtitle: '핵심 학습 내용', items: ['AI 이미지 생성 기법', 'UI/UX 디자인 원칙', '브랜드 일관성 유지', '디자인 시스템 구축'] },
-          { subtitle: '활용 도구', items: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'Figma AI', 'Canva AI'] },
-          { subtitle: '프로젝트 결과물', items: ['브랜드 비주얼 시스템', '웹사이트 디자인', '마케팅 콘텐츠 디자인'] }
+          { subtitle: '활용 도구', items: ['ChatGPT', 'Google Whisk'] },
+          { subtitle: '프로젝트 결과물', items: ['AI 콘텐츠 이미지 생성 및 디자인'] }
         ]
       },
       'coding': {
-        title: 'AI 웹 개발',
-        description: 'AI 도구를 활용한 효율적인 웹 개발과 프로토타이핑',
+        title: 'AI로 랜딩페이지 제작',
+        description: '비개발자도 빠르게 만드는 랜딩페이지 및 앱 개발 노하우',
         content: [
-          { subtitle: '핵심 학습 내용', items: ['AI 코딩 어시스턴트 활용', '프론트엔드 개발', '반응형 웹 디자인', 'API 통합'] },
-          { subtitle: '활용 도구', items: ['GitHub Copilot', 'Claude Code', 'Cursor AI', 'V0.dev', 'Replit'] },
-          { subtitle: '프로젝트 결과물', items: ['반응형 랜딩 페이지', '인터랙티브 웹 애플리케이션', 'AI 통합 데모'] }
+          { subtitle: '핵심 학습 내용', items: ['비개발자도 빠르게 만드는 랜딩페이지', '앱 개발 노하우'] },
+          { subtitle: '활용 도구', items: ['ChatGPT', 'Google AI Studio'] },
+          { subtitle: '프로젝트 결과물', items: ['온라인에서 사용가능한 랜딩페이지'] }
         ]
       },
       'automation': {
-        title: 'AI 자동화 & 최적화',
-        description: '워크플로우 자동화와 비즈니스 프로세스 최적화',
+        title: 'AI 자동화',
+        description: '자동화의 의의와 자동화 기획, Make.com으로 고객 DB 수집, 이메일 SMS 발송 자동화',
         content: [
-          { subtitle: '핵심 학습 내용', items: ['워크플로우 자동화', '데이터 분석 자동화', 'API 연결', '프로세스 최적화'] },
-          { subtitle: '활용 도구', items: ['Zapier', 'Make.com', 'n8n', 'Python scripts', 'Google Apps Script'] },
-          { subtitle: '프로젝트 결과물', items: ['자동화 시스템', '데이터 대시보드', '워크플로우 템플릿'] }
+          { subtitle: '핵심 학습 내용', items: ['자동화의 의의와 자동화 기획', 'Make.com으로 고객 DB 수집', '이메일 SMS 발송 자동화'] },
+          { subtitle: '활용 도구', items: ['Gemini', 'Make'] },
+          { subtitle: '프로젝트 결과물', items: ['고객 DB 자동화 수집시스템', 'DB 수집 시스템 랜딩페이지 연결'] }
         ]
       }
     };
