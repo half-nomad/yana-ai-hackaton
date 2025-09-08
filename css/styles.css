@@ -546,6 +546,53 @@ img {
   margin-top: var(--space-16);
 }
 
+/* Schedule Table Styles */
+.schedule-table {
+  margin: var(--space-8) 0;
+}
+
+.schedule-table h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--brand-primary);
+  margin-bottom: var(--space-6);
+}
+
+.schedule-table h5 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--fg-primary);
+  margin: var(--space-6) 0 var(--space-4) 0;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.schedule-item {
+  display: flex;
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--duration-normal) var(--easing-ease-out);
+}
+
+.schedule-item:hover {
+  background-color: var(--bg-muted);
+}
+
+.schedule-item .time {
+  font-weight: var(--font-semibold);
+  color: var(--brand-primary);
+  min-width: 120px;
+  flex-shrink: 0;
+  font-size: var(--text-sm);
+}
+
+.schedule-item .content {
+  color: var(--fg-secondary);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-sm);
+}
+
 /* Floating Banner */
 .floating-banner {
   position: fixed;
