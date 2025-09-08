@@ -434,3 +434,30 @@ a.active {
   color: var(--brand-primary);
   font-weight: var(--font-bold);
 }
+
+/* Application Notice Modal */
+.application-notice {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.application-notice__icon {
+  margin: 0 auto var(--space-4);
+  color: var(--brand-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.application-notice__text {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--fg-primary);
+  margin-bottom: var(--space-2);
+}
+
+.application-notice__subtext {
+  font-size: var(--text-base);
+  color: var(--fg-secondary);
+  line-height: var(--leading-relaxed);
+}

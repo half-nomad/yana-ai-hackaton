@@ -25,6 +25,7 @@ class YANALandingPage {
     this.setupHeroImageFade();
     this.setupPosterReveal();
     this.setupCurriculumModal();
+    this.setupApplicationNoticeModal();
   }
 
   // Accordion Component Implementation
@@ -500,6 +501,43 @@ class YANALandingPage {
         });
       }
     });
+  }
+
+  // Application Notice Modal
+  setupApplicationNoticeModal() {
+    const modal = document.getElementById('application-notice-modal');
+    const modalOverlay = modal.querySelector('.modal__overlay');
+    const closeButton = modal.querySelector('.modal__close');
+    const applicationButtons = document.querySelectorAll('[data-action="show-application-notice"]');
+
+    // Handle application button clicks
+    applicationButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openApplicationNoticeModal(modal);
+      });
+    });
+
+    // Handle modal close
+    const closeModal = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    modalOverlay.addEventListener('click', closeModal);
+    closeButton.addEventListener('click', closeModal);
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  openApplicationNoticeModal(modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 }
 

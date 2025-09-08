@@ -69,7 +69,7 @@
             <div class="container">
                 <div class="hero__content">
                     <h1 class="hero__title">1인 비즈니스 AI 활용 핵심 강의</h1>
-                    <h2 class="hero__event-title">YANA AI 해커톤</h2>
+                    <h2 class="hero__event-title">YANA AI 1박2일 밤샘 해커톤</h2>
                     <div class="hero__subtitle">
                         <p>프로들은 AI를 이렇게 쓸까?</p>
                         <p>혼자서도 대기업처럼 일하는 방법...</p>
@@ -80,7 +80,7 @@
                         <p><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg> 20명 한정 | 99만원</p>
                     </div>
                     <div class="hero__cta">
-                        <a href="https://www.notion.so/half-nomad/268091314f8f808db7d5c8bdf0e24763?v=268091314f8f805bb6bd000ca1a14f6f&source=copy_link" class="btn btn--primary btn--large" target="_blank">해커톤 신청하기</a>
+                        <a href="#" class="btn btn--primary btn--large" data-action="show-application-notice">해커톤 신청하기</a>
                         <a href="#curriculum" class="btn btn--secondary btn--large">커리큘럼 보기</a>
                     </div>
                 </div>
@@ -372,7 +372,7 @@
                     </div>
                 </div>
                 <div class="application__cta">
-                    <a href="https://www.notion.so/half-nomad/268091314f8f808db7d5c8bdf0e24763?v=268091314f8f805bb6bd000ca1a14f6f&source=copy_link" class="btn btn--primary btn--large" target="_blank">YANA AI 해커톤 신청하기</a>
+                    <a href="#" class="btn btn--primary btn--large" data-action="show-application-notice">YANA AI 해커톤 신청하기</a>
                 </div>
             </div>
         </section>
@@ -382,7 +382,7 @@
     <div class="floating-banner">
         <div class="floating-banner__content">
             <span class="floating-banner__text">24시간 만에 AI 마스터하기</span>
-            <a href="https://www.notion.so/half-nomad/268091314f8f808db7d5c8bdf0e24763?v=268091314f8f805bb6bd000ca1a14f6f&source=copy_link" class="btn btn--primary" target="_blank">지금 바로 신청</a>
+            <a href="#" class="btn btn--primary" data-action="show-application-notice">지금 바로 신청</a>
         </div>
     </div>
 
@@ -418,6 +418,32 @@
                 <div class="modal__icon"></div>
                 <h3 class="modal__title"></h3>
                 <div class="modal__description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Notice Modal -->
+    <div id="application-notice-modal" class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="모달 닫기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 6-12 12"/>
+                    <path d="m6 6 12 12"/>
+                </svg>
+            </button>
+            <div class="modal__body">
+                <div class="application-notice">
+                    <div class="application-notice__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3 class="modal__title">신청 안내</h3>
+                    <p class="application-notice__text">9월 9일 10시부터 신청가능해요</p>
+                    <p class="application-notice__subtext">조금만 기다려주세요! 곧 신청을 시작합니다.</p>
+                </div>
             </div>
         </div>
     </div>
