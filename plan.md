@@ -49,13 +49,13 @@
 
 ## 4. 체크리스트
 
--   [ ] 폴더 구조 생성
--   [ ] `index.html` 구조 설계 완료
--   [ ] `design-system.json` 작성
--   [ ] `styles.css`에 CSS 변수 및 전역 스타일 적용 완료
--   [ ] `components.css`에 컴포넌트 스타일 정의 완료
--   [ ] Accordion (토글) 컴포넌트 기능 구현
--   [ ] 플로팅 CTA 배너 기능 구현
+-   [x] 폴더 구조 생성
+-   [x] `index.html` 구조 설계 완료
+-   [x] `design-system.json` 작성
+-   [x] `styles.css`에 CSS 변수 및 전역 스타일 적용 완료
+-   [x] `components.css`에 컴포넌트 스타일 정의 완료
+-   [x] Accordion (토글) 컴포넌트 기능 구현
+-   [x] 플로팅 CTA 배너 기능 구현
 -   [ ] 히어로 섹션 스크롤 이미지 전환 효과 구현
 -   [ ] Smooth Scroll 기능 구현
 -   [ ] 반응형 레이아웃 최종 검토
