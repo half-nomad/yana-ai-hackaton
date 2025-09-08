@@ -409,6 +409,12 @@ img {
   padding: var(--space-section) 0;
 }
 
+/* Schedule Section */
+.schedule {
+  background: var(--bg-muted);
+  padding: var(--space-section) 0;
+}
+
 .instructors {
   background-color: var(--bg-secondary);
   padding: var(--space-section) 0;
