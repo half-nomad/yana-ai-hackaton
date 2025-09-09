@@ -461,6 +461,72 @@ class YANALandingPage {
       });
     });
 
+    // Handle target card clicks
+    const targetCardItems = document.querySelectorAll('.target-cards .flow-item');
+    const targetData = {
+      'brand-owner': {
+        title: '내 브랜드가 있는 1인 기업가',
+        description: '브랜드를 보유하고 있지만 AI 활용에 어려움을 겪는 1인 기업가를 위한 솔루션',
+        content: [
+          { 
+            subtitle: '현재 고민하는 문제들', 
+            items: [
+              '브랜드는 있지만 콘텐츠 제작에 시간이 너무 많이 소요됨',
+              '일관된 브랜드 톤앤매너를 유지하기 어려움', 
+              '마케팅 자료 제작 비용 부담',
+              '혼자서 모든 업무를 처리하느라 전략적 사고 부족'
+            ]
+          },
+          { 
+            subtitle: '해커톤에서 얻는 해결책', 
+            items: [
+              'AI로 브랜드 콘텐츠를 10배 빠르게 제작하는 방법',
+              '브랜드 일관성을 자동으로 유지하는 AI 시스템 구축',
+              '무료/저비용 AI 도구로 전문급 마케팅 자료 제작',
+              'AI 자동화로 반복 업무를 줄이고 전략에 집중하는 방법'
+            ]
+          }
+        ]
+      },
+      'ecommerce-seller': {
+        title: '이커머스 1인 셀러',
+        description: '온라인 판매를 하고 있지만 마케팅과 운영 자동화에 한계를 느끼는 셀러를 위한 솔루션',
+        content: [
+          { 
+            subtitle: '현재 고민하는 문제들', 
+            items: [
+              '상품 설명, 상세페이지 제작에 시간 과다 소요',
+              '고객 문의 응답, CS 처리의 반복적 업무 부담',
+              '마케팅 콘텐츠 제작 능력 부족으로 매출 한계',
+              '재고 관리, 주문 처리 등 운영 업무의 복잡성'
+            ]
+          },
+          { 
+            subtitle: '해커톤에서 얻는 해결책', 
+            items: [
+              'AI로 매력적인 상품 설명과 상세페이지를 자동 생성',
+              '고객 문의 자동 응답 시스템 구축으로 CS 업무 90% 절약',
+              'AI 도구로 SNS용 마케팅 콘텐츠를 대량 생성',
+              '주문-재고-배송까지 연결되는 완전 자동화 시스템 구축'
+            ]
+          }
+        ]
+      }
+    };
+
+    targetCardItems.forEach((item, index) => {
+      const targetKeys = ['brand-owner', 'ecommerce-seller'];
+      const dataKey = targetKeys[index];
+      
+      if (dataKey && targetData[dataKey]) {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.openCurriculumModal(modal, targetData[dataKey]);
+          this.trackEvent('target_modal_open', { target: dataKey });
+        });
+      }
+    });
+
     // Handle modal close
     const closeModal = () => {
       modal.classList.remove('active');
