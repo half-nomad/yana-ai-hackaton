@@ -461,3 +461,112 @@ a.active {
   color: var(--fg-secondary);
   line-height: var(--leading-relaxed);
 }
+
+/* Pro Profile Component */
+.pro-profile {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.pro-profile__text {
+  flex: 1;
+}
+
+.pro-profile__image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--border-default);
+  overflow: hidden;
+  transition: border-color var(--duration-normal) var(--easing-ease-out);
+}
+
+.pro-profile__image:hover {
+  border-color: var(--brand-primary);
+}
+
+.pro-profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--duration-normal) var(--easing-ease-out);
+}
+
+.pro-profile__image:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile adjustments for pro profile */
+@media (max-width: 768px) {
+  .pro-profile {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+  
+  .pro-profile__image {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Prizes and Goods Section */
+.prizes-section {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  background: var(--bg-muted);
+  border-left: 4px solid var(--brand-primary);
+}
+
+.prizes-section h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.prizes-section h5 {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--fg-primary);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.prizes-list, .goods-list {
+  margin-bottom: var(--space-4);
+}
+
+.prizes-list li, .goods-list li {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.prizes-list li:last-child, .goods-list li:last-child {
+  border-bottom: none;
+}
+
+.prizes-list li::before, .goods-list li::before {
+  content: '🎁';
+  margin-right: var(--space-2);
+  font-size: var(--text-lg);
+}
+
+.goods-list li::before {
+  content: '🎒';
+}
+
+.disclaimer {
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+  font-style: italic;
+  text-align: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-muted);
+}

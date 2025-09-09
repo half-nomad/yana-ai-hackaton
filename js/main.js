@@ -18,6 +18,7 @@ class YANALandingPage {
   }
 
   setupEventListeners() {
+    this.setupMobileMenu();
     this.setupAccordions();
     this.setupSmoothScroll();
     this.setupFloatingBanner();
@@ -26,6 +27,68 @@ class YANALandingPage {
     this.setupPosterReveal();
     this.setupCurriculumModal();
     this.setupApplicationNoticeModal();
+  }
+
+  // Mobile Menu Implementation
+  setupMobileMenu() {
+    const menuToggle = document.querySelector('.header__menu-toggle');
+    const mobileNav = document.querySelector('.header__mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav__list a');
+    
+    if (!menuToggle || !mobileNav) return;
+
+    // Toggle mobile menu
+    menuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.toggleMobileMenu(menuToggle, mobileNav);
+    });
+
+    // Close mobile menu when clicking a link
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        this.closeMobileMenu(menuToggle, mobileNav);
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.header') && mobileNav.classList.contains('active')) {
+        this.closeMobileMenu(menuToggle, mobileNav);
+      }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        this.closeMobileMenu(menuToggle, mobileNav);
+      }
+    });
+  }
+
+  toggleMobileMenu(toggle, nav) {
+    const isActive = nav.classList.contains('active');
+    
+    if (isActive) {
+      this.closeMobileMenu(toggle, nav);
+    } else {
+      this.openMobileMenu(toggle, nav);
+    }
+  }
+
+  openMobileMenu(toggle, nav) {
+    toggle.classList.add('active');
+    nav.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', '메뉴 닫기');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+
+  closeMobileMenu(toggle, nav) {
+    toggle.classList.remove('active');
+    nav.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', '메뉴 열기');
+    document.body.style.overflow = ''; // Restore scrolling
   }
 
   // Accordion Component Implementation
