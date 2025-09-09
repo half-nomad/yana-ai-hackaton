@@ -490,7 +490,7 @@ class YANALandingPage {
       },
       'ecommerce-seller': {
         title: '이커머스 1인 셀러',
-        description: '온라인 판매를 하고 있지만 마케팅과 고객 관리에 한계를 느끼는 셀러를 위한 솔루션',
+        description: '온라인 판매를 하고 있지만 마케팅과 운영 자동화에 한계를 느끼는 셀러를 위한 솔루션',
         content: [
           { 
             subtitle: '현재 고민하는 문제들', 
