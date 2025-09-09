@@ -169,7 +169,7 @@ a.active {
 }
 
 .accordion__content.active {
-  max-height: 500px;
+  max-height: 800px;
 }
 
 .accordion__content-inner {
@@ -462,53 +462,6 @@ a.active {
   line-height: var(--leading-relaxed);
 }
 
-/* Target Cards Component */
-.target-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
-  margin-bottom: var(--space-12);
-}
-
-.target-card {
-  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border: 1px solid var(--border-default);
-  padding: var(--space-8);
-  text-align: center;
-  transition: all var(--duration-normal) var(--easing-ease-out);
-  cursor: pointer;
-}
-
-.target-card:hover {
-  border-color: var(--brand-primary);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.target-card-icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto var(--space-4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--brand-primary);
-  border-radius: 50%;
-  color: var(--brand-primary-foreground);
-  transition: all var(--duration-normal) var(--easing-ease-out);
-}
-
-.target-card:hover .target-card-icon {
-  background: var(--brand-secondary);
-  transform: scale(1.1);
-}
-
-.target-card h3 {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--fg-primary);
-  margin: 0;
-}
 
 /* Pro Profile Component */
 .pro-profile {
