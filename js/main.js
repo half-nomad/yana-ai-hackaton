@@ -488,35 +488,34 @@ class YANALandingPage {
           }
         ]
       },
-      'ecommerce-seller': {
-        title: '이커머스 1인 셀러',
-        description: '온라인 판매를 하고 있지만 마케팅과 운영 자동화에 한계를 느끼는 셀러를 위한 솔루션',
+      'service-creator': {
+        title: '서비스를 제공하는 1인 크리에이터&전문가',
+        description: '개인 브랜드로 서비스나 콘텐츠를 제공하지만 마케팅과 고객 관리에 한계를 느끼는 크리에이터를 위한 솔루션',
         content: [
           { 
             subtitle: '현재 고민하는 문제들', 
             items: [
-              '상품 설명, 상세페이지 제작에 시간 과다 소요',
-              '고객 문의 응답, CS 처리의 반복적 업무 부담',
-              '마케팅 콘텐츠 제작 능력 부족으로 매출 한계',
-              '재고 관리, 주문 처리 등 운영 업무의 복잡성'
+              '전문성은 있지만 마케팅 콘텐츠 제작에 어려움',
+              '개인 브랜드 포지셔닝과 차별화 전략 부족',
+              '고객 상담, 문의 응답 등 반복 업무로 인한 시간 부족',
+              '서비스 홍보와 고객 유치를 위한 체계적 접근법 미흡'
             ]
           },
           { 
             subtitle: '해커톤에서 얻는 해결책', 
             items: [
-              'AI로 매력적인 상품 설명과 상세페이지를 자동 생성',
-              '고객 문의 자동 응답 시스템 구축으로 CS 업무 90% 절약',
-              'AI 도구로 SNS용 마케팅 콘텐츠를 대량 생성',
-              '주문-재고-배송까지 연결되는 완전 자동화 시스템 구축'
+              'AI로 전문성을 어필하는 마케팅 콘텐츠 자동 생성',
+              '개인 브랜드 포지셔닝을 명확히 하는 AI 브랜딩 전략',
+              '고객 상담과 문의를 자동화하는 AI 챗봇 시스템 구축',
+              '서비스 홍보부터 고객 관리까지 통합 자동화 시스템'
             ]
           }
         ]
       }
     };
 
-    targetCardItems.forEach((item, index) => {
-      const targetKeys = ['brand-owner', 'ecommerce-seller'];
-      const dataKey = targetKeys[index];
+    targetCardItems.forEach((item) => {
+      const dataKey = item.getAttribute('data-target');
       
       if (dataKey && targetData[dataKey]) {
         item.addEventListener('click', (e) => {
