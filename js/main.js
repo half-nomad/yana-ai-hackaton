@@ -425,7 +425,7 @@ class YANALandingPage {
         description: 'AI 도구를 활용한 창의적인 디자인과 비주얼 콘텐츠 제작',
         content: [
           { subtitle: '핵심 학습 내용', items: ['AI 이미지 생성 기법', 'AI 이미지 편집', '브랜드 일관성 유지', '실무 디자인 팁'] },
-          { subtitle: '활용 도구', items: ['ChatGPT', 'Google Whisk', 'Google Nano Banana'] },
+          { subtitle: '활용 도구', items: ['ChatGPT', 'Google Whisk', 'Google Nano Banana', 'Canva'] },
           { subtitle: '프로젝트 결과물', items: ['AI 콘텐츠 이미지 생성 및 디자인'] }
         ]
       },

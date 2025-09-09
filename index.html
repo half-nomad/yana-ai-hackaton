@@ -51,9 +51,24 @@
             <div class="header__logo">
                 <h1>YANA</h1>
             </div>
+            <nav class="header__nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">홈</a></li>
+                    <li><a href="#program" class="nav-link">프로그램</a></li>
+                    <li><a href="#instructors" class="nav-link">강사진</a></li>
+                    <li><a href="#schedule" class="nav-link">일정</a></li>
+                    <li><a href="#curriculum" class="nav-link">커리큘럼</a></li>
+                    <li><a href="#details" class="nav-link">신청방법</a></li>
+                </ul>
+            </nav>
             <div class="header__cta">
-                <a href="https://www.notion.so/half-nomad/268091314f8f808db7d5c8bdf0e24763?v=268091314f8f805bb6bd000ca1a14f6f&source=copy_link" class="btn btn--primary" target="_blank">지금 바로 신청</a>
+                <a href="https://www.latpeed.com/products/bT5DC" class="btn btn--primary" target="_blank">지금 바로 신청</a>
             </div>
+            <button class="hamburger-menu" aria-label="메뉴">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
@@ -69,7 +84,8 @@
             <div class="container">
                 <div class="hero__content">
                     <h1 class="hero__title">1인 비즈니스 AI 활용 핵심 강의</h1>
-                    <h2 class="hero__event-title">YANA AI 해커톤</h2>
+                    <h2 class="hero__event-title">YANA AI 1박2일 밤샘 해커톤</h2>
+                    <p class="hero-slogan">You Are Not Alone, YANA!!</p>
                     <div class="hero__subtitle">
                         <p>프로들은 AI를 이렇게 쓸까?</p>
                         <p>혼자서도 대기업처럼 일하는 방법...</p>
@@ -91,6 +107,27 @@
         <section id="program" class="program">
             <div class="container">
                 <h2 class="section__title">프로그램 소개</h2>
+                <div class="target-cards">
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                            </svg>
+                        </div>
+                        <h3>내 브랜드가 있는 1인 기업가</h3>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                        </div>
+                        <h3>이커머스 1인 셀러</h3>
+                    </div>
+                </div>
                 <div class="program__content">
                     <p>1인 사업가와 브랜드 보유자를 위한 <br>특별한 AI 마스터 과정입니다.</br><br>
                     24시간 동안 5명의 전문가와 함께</br>AI를 활용한 비즈니스 성장 비법을 체득하세요.</p>
@@ -190,14 +227,21 @@
                         <button class="accordion__header" data-target="branding">브랜드빌더 Pro : 브랜딩 기획</button>
                         <div class="accordion__content" id="branding">
                             <div class="accordion__content-inner">
-                                <h3>브랜드빌더 Pro : 브랜딩 전문가</h3>
-                                <ul>
-                                    <li>브랜드를 설계하고 디자인.</li>
-                                    <li>상상문고, 짱오락실, 에그박스, 간빠이 등을 브랜딩.</li>
-                                    <li>태안 바지락해장국/양구네 운영</li>
-                                    <li>디자인전문회사 23년차.</li>
-                                    <li>브랜딩경력 20년차 크리에이티브디렉터.</li>
-                                </ul>
+                                <div class="pro-profile">
+                                    <div class="pro-content">
+                                        <h3>브랜드빌더 Pro : 브랜딩 전문가</h3>
+                                        <ul>
+                                            <li>브랜드를 설계하고 디자인.</li>
+                                            <li>상상문고, 짱오락실, 에그박스, 간빠이 등을 브랜딩.</li>
+                                            <li>태안 바지락해장국/양구네 운영</li>
+                                            <li>디자인전문회사 23년차.</li>
+                                            <li>브랜딩경력 20년차 크리에이티브디렉터.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-image">
+                                        <img src="assets/브랜드빌더 Pro.jpg" alt="브랜드빌더 Pro 프로필 이미지" width="100" height="100">
+                                    </div>
+                                </div>
                                 <p><strong>SNS:</strong> <a href="https://www.threads.com/@brandbuilder_bb" target="_blank">https://www.threads.com/@brandbuilder_bb</a></p>
                             </div>
                         </div>
@@ -206,13 +250,20 @@
                         <button class="accordion__header" data-target="writing">글코치 Pro : 글쓰기</button>
                         <div class="accordion__content" id="writing">
                             <div class="accordion__content-inner">
-                                <h3>글코치 Pro : 글쓰기 전문가</h3>
-                                <ul>
-                                    <li>문창과 출신의 문창과 교수</li>
-                                    <li>글쓰기 트라우마 치료 전문</li>
-                                    <li>텍스트로 그리는 브랜드 이미지</li>
-                                    <li>마인드트리 대표</li>
-                                </ul>
+                                <div class="pro-profile">
+                                    <div class="pro-content">
+                                        <h3>글코치 Pro : 글쓰기 전문가</h3>
+                                        <ul>
+                                            <li>문창과 출신의 문창과 교수</li>
+                                            <li>글쓰기 트라우마 치료 전문</li>
+                                            <li>텍스트로 그리는 브랜드 이미지</li>
+                                            <li>마인드트리 대표</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-image">
+                                        <img src="assets/글코치 Pro.jpg" alt="글코치 Pro 프로필 이미지" width="100" height="100">
+                                    </div>
+                                </div>
                                 <p><strong>SNS:</strong> <a href="https://www.threads.com/@c.reator_c" target="_blank">https://www.threads.com/@c.reator_c</a></p>
                             </div>
                         </div>
@@ -221,14 +272,21 @@
                         <button class="accordion__header" data-target="design">쌩초 Pro : 디자인</button>
                         <div class="accordion__content" id="design">
                             <div class="accordion__content-inner">
-                                <h3>쌩초 Pro : AI 그래픽 디자인 전문가</h3>
-                                <ul>
-                                    <li>실무 13년 | 누구나 디자이너 되는 AI 꿀팁</li>
-                                    <li>CGV AI 영화 공모전 대상</li>
-                                    <li>매경미디어그룹 AI 광고 공모전 우수상</li>
-                                    <li><포토샵&AI 완벽 시너지> 저서</li>
-                                    <li>AI 광고 디자인 클래스</li>
-                                </ul>
+                                <div class="pro-profile">
+                                    <div class="pro-content">
+                                        <h3>쌩초 Pro : AI 그래픽 디자인 전문가</h3>
+                                        <ul>
+                                            <li>실무 13년 | 누구나 디자이너 되는 AI 꿀팁</li>
+                                            <li>CGV AI 영화 공모전 대상</li>
+                                            <li>매경미디어그룹 AI 광고 공모전 우수상</li>
+                                            <li><포토샵&AI 완벽 시너지> 저서</li>
+                                            <li>AI 광고 디자인 클래스</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-image">
+                                        <img src="assets/쌩초 Pro.png" alt="쌩초 Pro 프로필 이미지" width="100" height="100">
+                                    </div>
+                                </div>
                                 <p><strong>SNS:</strong> <a href="https://www.threads.com/@ssaengcho" target="_blank">https://www.threads.com/@ssaengcho</a></p>
                             </div>
                         </div>
@@ -237,13 +295,20 @@
                         <button class="accordion__header" data-target="coding">나민수 Pro : 바이브 코딩</button>
                         <div class="accordion__content" id="coding">
                             <div class="accordion__content-inner">
-                                <h3>나민수 Pro : AI 활용 자동화 전문가</h3>
-                                <ul>
-                                    <li>AIXLIFE 대표</li>
-                                    <li>개별 맞춤 AI 교육</li>
-                                    <li>1인 비지니스 자동화 솔루션</li>
-                                    <li>AI 학교 준비중</li>
-                                </ul>
+                                <div class="pro-profile">
+                                    <div class="pro-content">
+                                        <h3>나민수 Pro : AI 활용 자동화 전문가</h3>
+                                        <ul>
+                                            <li>AIXLIFE 대표</li>
+                                            <li>개별 맞춤 AI 교육</li>
+                                            <li>1인 비지니스 자동화 솔루션</li>
+                                            <li>AI 학교 준비중</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-image">
+                                        <img src="assets/나민수 Pro.png" alt="나민수 Pro 프로필 이미지" width="100" height="100">
+                                    </div>
+                                </div>
                                 <p><strong>SNS:</strong> <a href="https://www.threads.com/@naminsoo_ai" target="_blank">https://www.threads.com/@naminsoo_ai</a></p>
                             </div>
                         </div>
@@ -252,13 +317,20 @@
                         <button class="accordion__header" data-target="automation">이모카 Pro : 자동화</button>
                         <div class="accordion__content" id="automation">
                             <div class="accordion__content-inner">
-                                <h3>이모카 Pro : AI 활용 마케팅 전문가</h3>
-                                <ul>
-                                    <li>AI 콘텐츠 크리에이터 채널 [하프노마드] 운영</li>
-                                    <li>1인사업가&스몫비즈니스 마케팅 자동화 컸설팅</li>
-                                    <li>B2C 커머스 1인 유통사 운영</li>
-                                    <li>AI 국내 최대 커뮤니티 [지피터스] 스터디장</li>
-                                </ul>
+                                <div class="pro-profile">
+                                    <div class="pro-content">
+                                        <h3>이모카 Pro : AI 활용 마케팅 전문가</h3>
+                                        <ul>
+                                            <li>AI 콘텐츠 크리에이터 채널 [하프노마드] 운영</li>
+                                            <li>1인사업가&스몰비즈니스 마케팅 자동화 컨설팅</li>
+                                            <li>B2C 커머스 1인 유통사 운영</li>
+                                            <li>AI 국내 최대 커뮤니티 [지피터스] 스터디장</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-image">
+                                        <img src="assets/이모카 Pro.jpg" alt="이모카 Pro 프로필 이미지" width="100" height="100">
+                                    </div>
+                                </div>
                                 <p><strong>SNS:</strong> <a href="https://www.threads.com/@half.nomad" target="_blank">https://www.threads.com/@half.nomad</a></p>
                             </div>
                         </div>
@@ -343,20 +415,43 @@
                 <h2 class="section__title">프로그램 세부정보 및 신청방법</h2>
                 <div class="accordion" id="applicationAccordion">
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="details">세부 정보</button>
-                        <div class="accordion__content" id="details">
+                        <button class="accordion__header" data-target="schedule">일정 및 장소</button>
+                        <div class="accordion__content" id="schedule">
                             <div class="details__info">
-                                <h3>일정 및 장소</h3>
                                 <p><strong>일시:</strong> 2025년 9월 19일 1PM - 9월 20일 1PM (1박 2일)</p>
                                 <p><strong>장소:</strong> 메자닌 삼성 (9호선 삼성중앙역 10분, 예정)</p>
-                                <p><strong>참가비:</strong> <s>149</s> <strong style="font-size: 1.5em;">99만원</strong> (휴게 공간, 식사 2회, 간식 1회, 음료 포함)</p>
                                 <p><strong>인원:</strong> 최대 20명</p>
-                                <h3>제공 혜택</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header" data-target="benefits">제공 혜택</button>
+                        <div class="accordion__content" id="benefits">
+                            <div class="details__info">
+                                <h3>해커톤 시상 & 경품, 굿즈 내역</h3>
+                                <div class="prizes-section">
+                                    <h4>시상 및 경품 (총 200만원 상당)</h4>
+                                    <ul class="prizes-list">
+                                        <li>클라우드 노트펐</li>
+                                        <li>에어팆</li>
+                                        <li>신세계 상품권 20만원</li>
+                                        <li>그 외 다양한 선물</li>
+                                    </ul>
+                                    
+                                    <h4>굿즈</h4>
+                                    <ul class="goods-list">
+                                        <li>해커톤 티셔츠 & 모자</li>
+                                        <li>여행용키트 제공</li>
+                                    </ul>
+                                    
+                                    <p class="disclaimer">위 내역은 비슷한 물품으로 교체될 수 있습니다.</p>
+                                </div>
+                                
+                                <h3>기본 혜택</h3>
                                 <ul>
                                     <li>AI 해커톤 수료증 발급</li>
                                     <li>해당 일정 내 필요 시 전문가 코칭</li>
-                                    <li>총 200만 원 상당의 해커톤 시상 및 이벤트 경품</li>
-                                    <li>후속 온라인 커뮤니티에 Pro 들과 지속적인 교류&성장 도모</li>
+                                    <li>후속 온라인 커뮤니티에 Pro 들과 지속적인 교류 & 성장 도모</li>
                                     <li>AI 작업 결과물 보장</li>
                                 </ul>
                             </div>
