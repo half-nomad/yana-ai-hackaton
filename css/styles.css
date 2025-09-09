@@ -678,6 +678,15 @@ img {
   transform: translateY(-2px);
 }
 
+/* Target Cards */
+.target-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto var(--space-12);
+}
+
 /* Curriculum Flow */
 .curriculum__flow {
   display: grid;
