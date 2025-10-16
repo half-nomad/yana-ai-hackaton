@@ -402,62 +402,60 @@ class YANALandingPage {
     if (!modal || !curriculumItems.length) return;
 
     const curriculumData = {
-      'branding': {
-        title: 'AI 브랜딩 전략',
-        description: 'AI 도구를 활용한 브랜드 아이덴티티 구축과 마케팅 전략 수립',
+      'all-curriculum': {
+        title: '커리큘럼 중점 소개',
+        description: '',
         content: [
-          { subtitle: '핵심 학습 내용', items: ['브랜드 포지셔닝 전략', 'AI 기반 타겟 분석', '브랜드 스토리텔링', '시각적 브랜드 아이덴티티'] },
-          { subtitle: '활용 도구', items: ['ChatGPT', 'Claude', 'Google AI Studio'] },
-          { subtitle: '프로젝트 결과물', items: ['브랜드 전략 기획 및 가이드라인'] }
-        ]
-      },
-      'writing': {
-        title: 'AI 콘텐츠 라이팅',
-        description: 'AI를 활용한 효과적인 콘텐츠 제작과 카피라이팅 기법',
-        content: [
-          { subtitle: '핵심 학습 내용', items: ['AI 프롬프트 엔지니어링', '콘텐츠 전략 수립', '다양한 채널별 라이팅', 'SEO 최적화 콘텐츠'] },
-          { subtitle: '활용 도구', items: ['ChatGPT'] },
-          { subtitle: '프로젝트 결과물', items: ['우리 브랜드(나)에 대한 콘텐츠 크리에이팅 방법'] }
-        ]
-      },
-      'design': {
-        title: 'AI 디자인 & 비주얼',
-        description: 'AI 도구를 활용한 창의적인 디자인과 비주얼 콘텐츠 제작',
-        content: [
-          { subtitle: '핵심 학습 내용', items: ['AI 이미지 생성 기법', 'AI 이미지 편집', '브랜드 일관성 유지', '실무 디자인 팁'] },
-          { subtitle: '활용 도구', items: ['ChatGPT', 'Google Whisk', 'Google Nano Banana', 'Canva'] },
-          { subtitle: '프로젝트 결과물', items: ['AI 콘텐츠 이미지 생성 및 디자인'] }
-        ]
-      },
-      'coding': {
-        title: 'AI로 랜딩페이지 제작',
-        description: '비개발자도 빠르게 만드는 랜딩페이지 및 앱 개발 노하우',
-        content: [
-          { subtitle: '핵심 학습 내용', items: ['비개발자도 빠르게 만드는 랜딩페이지', '앱 개발 노하우'] },
-          { subtitle: '활용 도구', items: ['ChatGPT', 'Google AI Studio'] },
-          { subtitle: '프로젝트 결과물', items: ['온라인에서 사용가능한 랜딩페이지'] }
-        ]
-      },
-      'automation': {
-        title: 'AI 자동화',
-        description: '자동화의 의의와 자동화 기획, Make.com으로 고객 DB 수집, 이메일 SMS 발송 자동화',
-        content: [
-          { subtitle: '핵심 학습 내용', items: ['자동화의 의의와 자동화 기획', 'Make.com으로 고객 DB 수집', '이메일 SMS 발송 자동화'] },
-          { subtitle: '활용 도구', items: ['Gemini', 'Make'] },
-          { subtitle: '프로젝트 결과물', items: ['고객 DB 자동화 수집시스템', 'DB 수집 시스템 랜딩페이지 연결'] }
+          {
+            subtitle: '브랜딩 기획',
+            items: [
+              '핵심 학습 내용: 브랜드 포지셔닝 전략, AI 기반 타겟 분석, 브랜드 스토리텔링, 시각적 브랜드 아이덴티티',
+              '활용 도구: ChatGPT, Claude, Google AI Studio',
+              '프로젝트 결과물: 브랜드 전략 기획 및 가이드라인'
+            ]
+          },
+          {
+            subtitle: '글쓰기',
+            items: [
+              '핵심 학습 내용: AI 프롬프트 엔지니어링, 콘텐츠 전략 수립, 다양한 채널별 라이팅, SEO 최적화 콘텐츠',
+              '활용 도구: ChatGPT',
+              '프로젝트 결과물: 우리 브랜드(나)에 대한 콘텐츠 크리에이팅 방법'
+            ]
+          },
+          {
+            subtitle: '디자인',
+            items: [
+              '핵심 학습 내용: AI 이미지 생성 기법, AI 이미지 편집, 브랜드 일관성 유지, 실무 디자인 팁',
+              '활용 도구: ChatGPT, Google Whisk, Google Nano Banana, Canva',
+              '프로젝트 결과물: AI 콘텐츠 이미지 생성 및 디자인'
+            ]
+          },
+          {
+            subtitle: '랜딩페이지 제작',
+            items: [
+              '핵심 학습 내용: 비개발자도 빠르게 만드는 랜딩페이지, 앱 개발 노하우',
+              '활용 도구: ChatGPT, Google AI Studio',
+              '프로젝트 결과물: 온라인에서 사용가능한 랜딩페이지'
+            ]
+          },
+          {
+            subtitle: '자동화',
+            items: [
+              '핵심 학습 내용: 자동화의 의의와 자동화 기획, Make.com으로 고객 DB 수집, 이메일 SMS 발송 자동화',
+              '활용 도구: Gemini, Make',
+              '프로젝트 결과물: 고객 DB 자동화 수집시스템, DB 수집 시스템 랜딩페이지 연결'
+            ]
+          }
         ]
       }
     };
 
-    // Handle curriculum item clicks
-    curriculumItems.forEach((item, index) => {
-      const flowItems = ['branding', 'writing', 'design', 'coding', 'automation'];
-      const dataKey = flowItems[index];
-      
+    // Handle curriculum item clicks - show all curriculum in one modal
+    curriculumItems.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
-        this.openCurriculumModal(modal, curriculumData[dataKey]);
-        this.trackEvent('curriculum_modal_open', { section: dataKey });
+        this.openCurriculumModal(modal, curriculumData['all-curriculum']);
+        this.trackEvent('curriculum_modal_open', { section: 'all' });
       });
     });
 
@@ -466,19 +464,19 @@ class YANALandingPage {
     const targetData = {
       'brand-owner': {
         title: '내 브랜드가 있는 1인 기업가',
-        description: '브랜드를 보유하고 있지만 AI 활용에 어려움을 겪는 1인 기업가를 위한 솔루션',
+        description: '',
         content: [
-          { 
-            subtitle: '현재 고민하는 문제들', 
+          {
+            subtitle: '현재 고민하는 문제들',
             items: [
               '브랜드는 있지만 콘텐츠 제작에 시간이 너무 많이 소요됨',
-              '일관된 브랜드 톤앤매너를 유지하기 어려움', 
+              '일관된 브랜드 톤앤매너를 유지하기 어려움',
               '마케팅 자료 제작 비용 부담',
               '혼자서 모든 업무를 처리하느라 전략적 사고 부족'
             ]
           },
-          { 
-            subtitle: '해커톤에서 얻는 해결책', 
+          {
+            subtitle: '해커톤에서 얻는 해결책',
             items: [
               'AI로 브랜드 콘텐츠를 10배 빠르게 제작하는 방법',
               '브랜드 일관성을 자동으로 유지하는 AI 시스템 구축',
@@ -490,18 +488,18 @@ class YANALandingPage {
       },
       'ecommerce-seller': {
         title: '이커머스 1인 셀러',
-        description: '온라인 판매를 하고 있지만 마케팅과 운영 자동화에 한계를 느끼는 셀러를 위한 솔루션',
+        description: '',
         content: [
-          { 
-            subtitle: '현재 고민하는 문제들', 
+          {
+            subtitle: '현재 고민하는 문제들',
             items: [
               '상품 설명, 상세페이지 제작에 시간 과다 소요',
               '고객 문의 응답, CS 처리의 반복적 업무 부담',
               '마케팅 콘텐츠 제작 능력 부족으로 매출 한계'
             ]
           },
-          { 
-            subtitle: '해커톤에서 얻는 해결책', 
+          {
+            subtitle: '해커톤에서 얻는 해결책',
             items: [
               'AI로 매력적인 상품 설명과 상세페이지를 자동 생성',
               '고객 문의 자동 응답 시스템 구축으로 CS 업무 90% 절약',
@@ -544,12 +542,17 @@ class YANALandingPage {
   openCurriculumModal(modal, data) {
     const modalTitle = modal.querySelector('.modal__title');
     const modalDescription = modal.querySelector('.modal__description');
-    
+
     // Update modal content
     modalTitle.textContent = data.title;
-    
-    let contentHTML = `<p>${data.description}</p>`;
-    
+
+    let contentHTML = '';
+
+    // Only add description if it exists and is not empty
+    if (data.description && data.description.trim() !== '') {
+      contentHTML += `<p>${data.description}</p>`;
+    }
+
     data.content.forEach(section => {
       contentHTML += `
         <h4>${section.subtitle}</h4>
@@ -558,9 +561,9 @@ class YANALandingPage {
         </ul>
       `;
     });
-    
+
     modalDescription.innerHTML = contentHTML;
-    
+
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';

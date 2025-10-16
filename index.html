@@ -117,28 +117,8 @@
         <section id="program" class="program">
             <div class="container">
                 <h2 class="section__title">프로그램 소개</h2>
-                <div class="target-cards">
-                    <div class="flow-item" data-target="brand-owner" style="cursor: pointer;">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
-                            </svg>
-                        </div>
-                        <h3>내 브랜드가 있는 1인 기업가</h3>
-                    </div>
-                    <div class="flow-item" data-target="ecommerce-seller" style="cursor: pointer;">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="9" cy="21" r="1"/>
-                                <circle cx="20" cy="21" r="1"/>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-                            </svg>
-                        </div>
-                        <h3>이커머스 1인 셀러</h3>
-                    </div>
-                </div>
-                <div class="program__content">
+
+                <div class="program__intro">
                     <p>1인 사업가와 브랜드 보유자를 위한 <br>특별한 AI 마스터 과정입니다.</br><br>
                     24시간 동안 5명의 전문가와 함께</br>AI를 활용한 비즈니스 성장 비법을 체득하세요.</p>
                     <ul>
@@ -148,6 +128,65 @@
                         <li><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 11-6-2-6 6"/></svg> 네트워킹: 해커톤 이후 AI챌린지 활동</li>
                         <li><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg> 실전 적용: 바로 써먹는 최신 AI 실전 노하우</li>
                     </ul>
+                </div>
+
+                <div class="program__cards">
+                    <!-- 내 브랜드가 있는 1인 기업가 -->
+                    <div class="program-card">
+                        <div class="program-card__header">
+                            <div class="program-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                                </svg>
+                            </div>
+                            <h3>내 브랜드가 있는 1인 기업가</h3>
+                        </div>
+                        <div class="program-card__content">
+                            <h4>현재 고민하는 문제들</h4>
+                            <ul>
+                                <li>브랜드는 있지만 콘텐츠 제작에 시간이 너무 많이 소요됨</li>
+                                <li>일관된 브랜드 톤앤매너를 유지하기 어려움</li>
+                                <li>마케팅 자료 제작 비용 부담</li>
+                                <li>혼자서 모든 업무를 처리하느라 전략적 사고 부족</li>
+                            </ul>
+                            <h4>해커톤에서 얻는 해결책</h4>
+                            <ul>
+                                <li>AI로 브랜드 콘텐츠를 10배 빠르게 제작하는 방법</li>
+                                <li>브랜드 일관성을 자동으로 유지하는 AI 시스템 구축</li>
+                                <li>무료/저비용 AI 도구로 전문급 마케팅 자료 제작</li>
+                                <li>AI 자동화로 반복 업무를 줄이고 전략에 집중하는 방법</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 이커머스 1인 셀러 -->
+                    <div class="program-card">
+                        <div class="program-card__header">
+                            <div class="program-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"/>
+                                    <circle cx="20" cy="21" r="1"/>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                                </svg>
+                            </div>
+                            <h3>이커머스 1인 셀러</h3>
+                        </div>
+                        <div class="program-card__content">
+                            <h4>현재 고민하는 문제들</h4>
+                            <ul>
+                                <li>상품 설명, 상세페이지 제작에 시간 과다 소요</li>
+                                <li>고객 문의 응답, CS 처리의 반복적 업무 부담</li>
+                                <li>마케팅 콘텐츠 제작 능력 부족으로 매출 한계</li>
+                            </ul>
+                            <h4>해커톤에서 얻는 해결책</h4>
+                            <ul>
+                                <li>AI로 매력적인 상품 설명과 상세페이지를 자동 생성</li>
+                                <li>고객 문의 자동 응답 시스템 구축으로 CS 업무 90% 절약</li>
+                                <li>AI 도구로 SNS용 마케팅 콘텐츠를 대량 생성</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -163,66 +202,147 @@
         <section id="curriculum" class="curriculum">
             <div class="container">
                 <h2 class="section__title">커리큘럼 중점 소개</h2>
-                <div class="curriculum__flow">
-                    <div class="flow-item">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 12l2 2 4-4"/>
-                                <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
-                                <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
-                                <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
-                                <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
-                            </svg>
+                <div class="curriculum__cards">
+                    <!-- 브랜딩 기획 -->
+                    <div class="curriculum-card">
+                        <div class="curriculum-card__header">
+                            <div class="curriculum-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
+                                    <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
+                                    <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
+                                    <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1"/>
+                                </svg>
+                            </div>
+                            <h3>브랜딩 기획</h3>
                         </div>
-                        <h3>브랜딩 기획</h3>
+                        <div class="curriculum-card__content">
+                            <h4>핵심 학습 내용</h4>
+                            <ul>
+                                <li>브랜드 포지셔닝 전략</li>
+                                <li>AI 기반 타겟 분석</li>
+                                <li>브랜드 스토리텔링</li>
+                                <li>시각적 브랜드 아이덴티티</li>
+                            </ul>
+                            <h4>활용 도구</h4>
+                            <p>ChatGPT, Claude, Google AI Studio</p>
+                            <h4>프로젝트 결과물</h4>
+                            <p>브랜드 전략 기획 및 가이드라인</p>
+                        </div>
                     </div>
-                    <div class="flow-item">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" x2="8" y1="13" y2="13"/>
-                                <line x1="16" x2="8" y1="17" y2="17"/>
-                                <polyline points="10,9 9,9 8,9"/>
-                            </svg>
+
+                    <!-- 글쓰기 -->
+                    <div class="curriculum-card">
+                        <div class="curriculum-card__header">
+                            <div class="curriculum-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" x2="8" y1="13" y2="13"/>
+                                    <line x1="16" x2="8" y1="17" y2="17"/>
+                                    <polyline points="10,9 9,9 8,9"/>
+                                </svg>
+                            </div>
+                            <h3>글쓰기</h3>
                         </div>
-                        <h3>글쓰기</h3>
+                        <div class="curriculum-card__content">
+                            <h4>핵심 학습 내용</h4>
+                            <ul>
+                                <li>AI 프롬프트 엔지니어링</li>
+                                <li>콘텐츠 전략 수립</li>
+                                <li>다양한 채널별 라이팅</li>
+                                <li>SEO 최적화 콘텐츠</li>
+                            </ul>
+                            <h4>활용 도구</h4>
+                            <p>ChatGPT</p>
+                            <h4>프로젝트 결과물</h4>
+                            <p>우리 브랜드(나)에 대한 콘텐츠 크리에이팅 방법</p>
+                        </div>
                     </div>
-                    <div class="flow-item">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="18" cy="5" r="3"/>
-                                <circle cx="6" cy="12" r="3"/>
-                                <circle cx="18" cy="19" r="3"/>
-                                <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/>
-                                <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/>
-                            </svg>
+
+                    <!-- 디자인 -->
+                    <div class="curriculum-card">
+                        <div class="curriculum-card__header">
+                            <div class="curriculum-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3"/>
+                                    <circle cx="6" cy="12" r="3"/>
+                                    <circle cx="18" cy="19" r="3"/>
+                                    <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/>
+                                    <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/>
+                                </svg>
+                            </div>
+                            <h3>디자인</h3>
                         </div>
-                        <h3>디자인</h3>
+                        <div class="curriculum-card__content">
+                            <h4>핵심 학습 내용</h4>
+                            <ul>
+                                <li>AI 이미지 생성 기법</li>
+                                <li>AI 이미지 편집</li>
+                                <li>브랜드 일관성 유지</li>
+                                <li>실무 디자인 팁</li>
+                            </ul>
+                            <h4>활용 도구</h4>
+                            <p>ChatGPT, Google Whisk, Google Nano Banana, Canva</p>
+                            <h4>프로젝트 결과물</h4>
+                            <p>AI 콘텐츠 이미지 생성 및 디자인</p>
+                        </div>
                     </div>
-                    <div class="flow-item">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"/>
-                                <polyline points="8 6 2 12 8 18"/>
-                            </svg>
+
+                    <!-- 랜딩페이지 제작 -->
+                    <div class="curriculum-card">
+                        <div class="curriculum-card__header">
+                            <div class="curriculum-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>랜딩페이지 제작</h3>
                         </div>
-                        <h3>랜딩페이지 제작</h3>
+                        <div class="curriculum-card__content">
+                            <h4>핵심 학습 내용</h4>
+                            <ul>
+                                <li>비개발자도 빠르게 만드는 랜딩페이지</li>
+                                <li>앱 개발 노하우</li>
+                            </ul>
+                            <h4>활용 도구</h4>
+                            <p>ChatGPT, Google AI Studio</p>
+                            <h4>프로젝트 결과물</h4>
+                            <p>온라인에서 사용가능한 랜딩페이지</p>
+                        </div>
                     </div>
-                    <div class="flow-item">
-                        <div class="flow-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2v6"/>
-                                <path d="m16.2 7.8 2.9-2.9"/>
-                                <path d="M18 12h6"/>
-                                <path d="m16.2 16.2 2.9 2.9"/>
-                                <path d="M12 18v6"/>
-                                <path d="m4.9 19.1 2.9-2.9"/>
-                                <path d="M2 12h6"/>
-                                <path d="m4.9 4.9 2.9 2.9"/>
-                            </svg>
+
+                    <!-- 자동화 -->
+                    <div class="curriculum-card">
+                        <div class="curriculum-card__header">
+                            <div class="curriculum-card__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v6"/>
+                                    <path d="m16.2 7.8 2.9-2.9"/>
+                                    <path d="M18 12h6"/>
+                                    <path d="m16.2 16.2 2.9 2.9"/>
+                                    <path d="M12 18v6"/>
+                                    <path d="m4.9 19.1 2.9-2.9"/>
+                                    <path d="M2 12h6"/>
+                                    <path d="m4.9 4.9 2.9 2.9"/>
+                                </svg>
+                            </div>
+                            <h3>자동화</h3>
                         </div>
-                        <h3>자동화</h3>
+                        <div class="curriculum-card__content">
+                            <h4>핵심 학습 내용</h4>
+                            <ul>
+                                <li>자동화의 의의와 자동화 기획</li>
+                                <li>Make.com으로 고객 DB 수집</li>
+                                <li>이메일 SMS 발송 자동화</li>
+                            </ul>
+                            <h4>활용 도구</h4>
+                            <p>Gemini, Make</p>
+                            <h4>프로젝트 결과물</h4>
+                            <p>고객 DB 자동화 수집시스템, DB 수집 시스템 랜딩페이지 연결</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,8 +354,8 @@
                 <h2 class="section__title">프로(강사) 소개</h2>
                 <div class="accordion" id="instructorsAccordion">
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="branding">브랜드빌더 Pro : 브랜딩 기획</button>
-                        <div class="accordion__content" id="branding">
+                        <button class="accordion__header" data-target="branding" aria-expanded="true">브랜드빌더 Pro : 브랜딩 기획</button>
+                        <div class="accordion__content active" id="branding">
                             <div class="accordion__content-inner">
                                 <div class="pro-profile">
                                     <div class="pro-profile__text">
@@ -257,8 +377,8 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="writing">글코치 Pro : 글쓰기</button>
-                        <div class="accordion__content" id="writing">
+                        <button class="accordion__header" data-target="writing" aria-expanded="true">글코치 Pro : 글쓰기</button>
+                        <div class="accordion__content active" id="writing">
                             <div class="accordion__content-inner">
                                 <div class="pro-profile">
                                     <div class="pro-profile__text">
@@ -279,8 +399,8 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="design">쌩초 Pro : 디자인</button>
-                        <div class="accordion__content" id="design">
+                        <button class="accordion__header" data-target="design" aria-expanded="true">쌩초 Pro : 디자인</button>
+                        <div class="accordion__content active" id="design">
                             <div class="accordion__content-inner">
                                 <div class="pro-profile">
                                     <div class="pro-profile__text">
@@ -302,8 +422,8 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="coding">나민수 Pro : 바이브 코딩</button>
-                        <div class="accordion__content" id="coding">
+                        <button class="accordion__header" data-target="coding" aria-expanded="true">나민수 Pro : 바이브 코딩</button>
+                        <div class="accordion__content active" id="coding">
                             <div class="accordion__content-inner">
                                 <div class="pro-profile">
                                     <div class="pro-profile__text">
@@ -324,8 +444,8 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="automation">이모카 Pro : 자동화</button>
-                        <div class="accordion__content" id="automation">
+                        <button class="accordion__header" data-target="automation" aria-expanded="true">이모카 Pro : 자동화</button>
+                        <div class="accordion__content active" id="automation">
                             <div class="accordion__content-inner">
                                 <div class="pro-profile">
                                     <div class="pro-profile__text">
@@ -396,11 +516,15 @@
                         <span class="content">바이브 코딩 기초 — "GPTs + 웹앱 서비스: 나만의 AI 직원 뽑기"</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">11:00 ~ 13:00</span>
+                        <span class="time">11:00 ~ 12:00</span>
                         <span class="content">자동화 실습 — "고객 모집·메일 발송·홍보까지, 클릭 몇 번으로 자동화"</span>
                     </div>
                     <div class="schedule-item">
-                        <span class="time">14:00 ~ 15:00</span>
+                        <span class="time">12:00 ~ 13:00</span>
+                        <span class="content">점심 식사 — "오전 활동 마무리 & 에너지 재충전"</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">13:00 ~ 15:00</span>
                         <span class="content">프로젝트 마무리 — "내 브랜드 완성본 정리하기"</span>
                     </div>
                     <div class="schedule-item">
@@ -417,8 +541,8 @@
                 <h2 class="section__title">프로그램 세부정보 및 신청방법</h2>
                 <div class="accordion" id="applicationAccordion">
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="details-schedule">일정 및 장소</button>
-                        <div class="accordion__content" id="details-schedule">
+                        <button class="accordion__header" data-target="details-schedule" aria-expanded="true">일정 및 장소</button>
+                        <div class="accordion__content active" id="details-schedule">
                             <div class="details__info">
                                 <p><strong>일시:</strong> 2025년 9월 19일 1PM - 9월 20일 1PM (1박 2일)</p>
                                 <p><strong>장소:</strong> 메자닌 삼성 (9호선 삼성중앙역 10분, 예정)</p>
@@ -427,10 +551,10 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="benefits">제공 혜택</button>
-                        <div class="accordion__content" id="benefits">
+                        <button class="accordion__header" data-target="benefits" aria-expanded="true">제공 혜택</button>
+                        <div class="accordion__content active" id="benefits">
                             <div class="details__info">
-                                <h3>해커톤 시상 & 경품, 굿즈 내역</h3>
+                                <h3>해커톤 시상 & 경품</h3>
                                 <div class="prizes-section">
                                     <h4>시상 및 경품 (총 200만원 상당)</h4>
                                     <ul class="prizes-list">
@@ -439,16 +563,10 @@
                                         <li>신세계 상품권 20만원</li>
                                         <li>그 외 다양한 선물</li>
                                     </ul>
-                                    
-                                    <h4>굿즈</h4>
-                                    <ul class="goods-list">
-                                        <li>해커톤 티셔츠 & 모자</li>
-                                        <li>여행용키트 제공</li>
-                                    </ul>
-                                    
+
                                     <p class="disclaimer">위 내역은 비슷한 물품으로 교체될 수 있습니다.</p>
                                 </div>
-                                
+
                                 <h3>기본 혜택</h3>
                                 <ul>
                                     <li>AI 해커톤 수료증 발급</li>
@@ -460,8 +578,8 @@
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <button class="accordion__header" data-target="method">신청 방법</button>
-                        <div class="accordion__content" id="method">
+                        <button class="accordion__header" data-target="method" aria-expanded="true">신청 방법</button>
+                        <div class="accordion__content active" id="method">
                             <div class="method__steps">
                                 <p><strong>신청 방법:</strong> 아래 신청폼 작성 후 결제 완료 시 회신</p>
                             </div>
