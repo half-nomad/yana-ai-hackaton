@@ -727,9 +727,10 @@ img {
 
 .program-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-default);
+  border: 2px solid var(--brand-primary);
   padding: var(--space-8);
   transition: all var(--duration-normal) var(--easing-ease-out);
+  box-shadow: 0 4px 12px rgba(242, 229, 0, 0.1);
 }
 
 .program-card:hover {
@@ -809,9 +810,10 @@ img {
 
 .curriculum-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-default);
+  border: 2px solid var(--brand-secondary);
   padding: var(--space-8);
   transition: all var(--duration-normal) var(--easing-ease-out);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.1);
 }
 
 .curriculum-card:hover {
